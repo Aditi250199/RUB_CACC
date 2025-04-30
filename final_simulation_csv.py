@@ -1,6 +1,8 @@
 # simulate_cacc.py
 import pandas as pd
 import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from final_CACC_controller_setup import CACC, extended_CACC
 
