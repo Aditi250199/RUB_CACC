@@ -6,6 +6,7 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from final_CACC_controller_setup import CACC, extended_CACC
 
+
 # vehicles.py
 import numpy as np
 
