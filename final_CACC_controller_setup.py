@@ -10,7 +10,7 @@ import time
 
 
 class CACC:
-    def __init__(self, k1, k2, headway=0.2, time_gap=0.2) -> None:
+    def __init__(self, k1, k2, headway=0.2, time_gap=0.2):
         self.k1 = k1
         self.k2 = k2
         self.time_gap = time_gap  # seconds
@@ -34,7 +34,7 @@ class CACC:
 
 
 class extended_CACC:
-    def __init__(self, k1, k2, headway=0.2, time_gap=0.2) -> None:
+    def __init__(self, k1, k2, headway=0.2, time_gap=0.2):
         self.k1 = k1
         self.k2 = k2
         self.time_gap = time_gap  # seconds
@@ -140,9 +140,9 @@ class extended_CACC:
         vec = np.array([[self.k1 * z11], [self.k2 * z21]]) + inv_cos_alpha1 * np.array([[z31], [z41]]) + beta11
 
         out = np.matmul(inv_Gamma12_1, vec)
-        a = out[0]
-        omega = out[1]
-        return float(a), float(omega)
+        a = float(out[0])
+        omega = float(out[1])
+        return a, omega
 
 
 
